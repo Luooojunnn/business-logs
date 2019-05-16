@@ -2,10 +2,11 @@
 
 const APP = require("../app");
 let { createServer } = require("http");
-
 const HTTP = createServer(APP);
-
+let getIPAdress = require("../utils/getIPAdress")
 
 HTTP.listen(8080, () => {
-  console.log("监控服务启动在8080端口上");
+  console.log(`监控服务启动${getIPAdress()}:8080在上`);
 });
+
+
