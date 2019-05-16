@@ -8,7 +8,6 @@ let logConfig = require("./logConfig")
 log4js.configure(logConfig)
 let logger = log4js.getLogger()
 
-
 function log(req, res, next) {
   if (req.method.toLowerCase() === "post") {
     console.log(`今日日志条数${
