@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+const APP = require("../app");
+let { createServer } = require("http");
+
+const HTTP = createServer(APP);
+
+
+HTTP.listen(8080, () => {
+  console.log("监控服务启动在8080端口上");
+});
